@@ -153,7 +153,7 @@ Node.propTypes = {
   onClick: T.func.isRequired,
   onMouseOver: T.func.isRequired,
   onMouseOut: T.func.isRequired,
-  name: T.string.isRequired,
+  name: T.string,
   attributes: T.object,
   textLayout: T.object.isRequired,
   subscriptions: T.object.isRequired, // eslint-disable-line react/no-unused-prop-types
