@@ -46,8 +46,8 @@ function _transformToHierarchy(links, attributeFields) {
     const parent = link.source;
     const child = link.target;
 
-    parent.id = uuid.v4();
-    child.id = uuid.v4();
+    //parent.id = uuid.v4();
+    //child.id = uuid.v4();
     child.parent = parent.name || null;
 
     parent._collapsed = child._collapsed = false; // eslint-disable-line
