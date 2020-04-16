@@ -99,6 +99,8 @@ export default class Tree extends React.Component {
     const { rd3tSvgClassName, rd3tGClassName } = this.state;
     const svg = select(`.${rd3tSvgClassName}`);
     const g = select(`.${rd3tGClassName}`);
+    
+    svg.on("dblclick.zoom", null)
 
     if (zoomable) {
       svg.call(
