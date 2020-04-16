@@ -100,7 +100,7 @@ export default class Tree extends React.Component {
     const svg = select(`.${rd3tSvgClassName}`);
     const g = select(`.${rd3tGClassName}`);
     
-    svg.on("dblclick.zoom", null)
+   
 
     if (zoomable) {
       svg.call(
@@ -122,12 +122,12 @@ export default class Tree extends React.Component {
               this.internalState.d3.translate = { x: event.translate[0], y: event.translate[1] };
             }
           })
-          .on("dblclick.zoom", null)
           // Offset so that first pan and zoom does not jump back to [0,0] coords
           .scale(zoom)
           .translate([translate.x, translate.y]),
       );
     }
+    svg.on("dblclick.zoom", null)
   }
 
   /**
